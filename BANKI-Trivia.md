@@ -22,9 +22,9 @@
 
 ---
 
-## Behavioral
-
-Most of the behavioral questions should be answered in the CAR format. At least three sentences for each question (one for cause, one for action and one for result). When answering begin with "At my last opportunity..." or "At my last company". Don't sell yourself out and say "bootcamp" or "school".
+> ## `Behavioral Questions`
+>
+> Most of the behavioral questions should be answered in the CAR format. At least three sentences for each question (one for cause, one for action and one for result). When answering begin with "At my last opportunity..." or "At my last company". Don't sell yourself out and say "bootcamp" or "school".
 
 ### CAR
 
@@ -168,108 +168,192 @@ Most of the behavioral questions should be answered in the CAR format. At least 
 - What is the onboarding process after the offer?
 - Are there training programs available?
 
-## Technical Questions
+<br>
 
-Most of the technical questions should have a three sentence response in the EUE format:
+> ## Technical Questions
+>
+> Most of the technical questions should have a three sentence response in the EUE format:
+>
+> - **Explanation**
+> - **Use**
+> - **Example**
 
-- **Explanation**
-- **Use**
-- **Example**
+<br/>
 
-### HTML
+# `HTML`
 
-- [x] T-HTML-1) What does a doctype do?
+1. > What does a doctype do?
 
-  - **Explanation:** Instructions to the browser about what version of HTML the webpage is written in, ensuring the web page is parsed the same way across web browsers.
-  - **Use:** It's the first line of code in the HTML document.
-  - **Example:** For an HTML5 document the tag would be `<!DOCTYPE html>`
-  - **Source:** https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
 
-- [x] T-HTML-2) How do you serve a page with content in multiple languages?
+- **Explanation:** Instructions to the browser about what version of HTML the webpage is written in, ensuring the web page is parsed the same way across web browsers.
+- **Use:** It's the first line of code in the HTML document.
+- **Example:** For an HTML5 document the tag would be `<!DOCTYPE html>`
+- **Source:** https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/
 
-  - **Explanation:** By setting the lang attributes on the various elements within the page.
-  - **Use:** The lang attribute can be used on various elements (typically html, p, li...)
-  - **Example:** You can set the whole site as being english by setting the html element `<html lang="en">` Or you could set a paragraph as spanish with `<p lang="es">`
-  - **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
+---
 
-- [x] T-HTML-3) What kinds of things must you be wary of when designing or developing for multilingual sites?
+</details>
+<br/>
 
-  - **Explanation:** There are quite a few different nuances to pay attention to including:
-    - Including the `lang` attribute
-    - Allowing users to change the language
-    - Minimize text in raster based images
-    - Text overflow when translated
-    - How colors are perceived
-    - Date and currency formats
-    - Language reading direction
-    - Don't concatenate translated strings
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+2. > How do you serve a page with content in multiple languages?
 
-- [x] T-HTML-4) What are `data-` attributes good for?
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
 
-  - **Explanation:** They store data private to the page or application.
-  - **Use:** They were often used for storing extra data in the DOM, but are generally discouraged now.
-  - **Example:** The exception is to add a hook for end to end testing frameworks like Selenium.
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+- **Explanation:** By setting the lang attributes on the various elements within the page.
+- **Use:** The lang attribute can be used on various elements (typically html, p, li...)
+- **Example:** You can set the whole site as being english by setting the html element `<html lang="en">` Or you could set a paragraph as spanish with `<p lang="es">`
+- **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
 
-- [x] T-HTML-5) Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+---
 
-  - **Explanation:**
-    - Semantics: Describe the content
-    - Connectivity: Communicate with the server
-    - Offline and storage: Store data client-side
-    - Multimedia: Make audio and video first-class citizens
-    - Graphics and effects: Diverse range of presentation options
-    - Performance and integration: Speed optimization
-    - Device access: Various input and output devices
-    - Styling: More sophisticated themes
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+</details>
+<br/>
 
-- [x] T-HTML-6) Describe the difference between a cookie, sessionStorage and localStorage.
+3. > What kinds of things must you be wary of when designing or developing for multilingual sites?
 
-  - **Explanation:** Cookies can be initiated by the server, have a manually set expiration date are small file size and are sent to the server with HTTP request. Local and session are both initiated by the client, are a relatively large file and aren't sent to the server. The main difference between local and session is that local storage will persist forever until cleared manually.
-  - **Use:** They are all used for client side storage of strings in key-value pairs.
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
 
-- [x] T-HTML-7) Describe the difference between `<script>, <script async> and <script defer>`.
+- **Explanation:** There are quite a few different nuances to pay attention to including:
+  - Including the `lang` attribute
+  - Allowing users to change the language
+  - Minimize text in raster based images
+  - Text overflow when translated
+  - How colors are perceived
+  - Date and currency formats
+  - Language reading direction
+  - Don't concatenate translated strings
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
 
-  - **Explanation:**
-    - `<script>` HTML parsing is blocked, script is fetched and executed immediately.
-    - `<script async>` script fetched in parallel to HTML parsing and executed as soon as it is available.
-    - `<script defer>` script fetched in parallel to HTML parsing and executed when the page has finished parsing.
-  - **Use:**
-    - Use `async` when the script is independent of any other scripts on the page
-    - `defer` is useful when you need to make sure the HTML is fully parsed before executing.
-  - **Example:**
-    - `async` could be used for analytics scripts.
-    - A deferred script must not contain `document.write`
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+---
 
-- [x] T-HTML-8) Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+</details>
+<br/>
 
-  - **Explanation:** Putting `<link>`s in the `<head>` allows for quick "first meaningful paint". When a page first loads, HTML and CSS are being parsed simultaneously. Conversely `<script>` tags block HTML parsing while they are being downloaded and executed which can slow down your page. Placing the scripts at the bottom will allow the HTML to be parsed and displayed to the user first.
-  - **Exceptions:** When your script contains `document.write`, however it isn't consider good practice to use `document.write`. Also if you need scripts to run on page load it may be beneficial to split them out from your main script and place in the head.
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+4. > What are `data-` attributes good for?
 
-- [x] T-HTML-9) hat is progressive rendering?
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
 
-  - **Explanation:** Techniques used to improve the performance of a webpage to render content for display as quickly as possible.
-  - **Use:** Improving perceived load time
-  - **Example:** Lazy loading of images, Prioritizing visible content (or above-the-fold rendering) and Async HTML fragments
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+- **Explanation:** They store data private to the page or application.
+- **Use:** They were often used for storing extra data in the DOM, but are generally discouraged now.
+- **Example:** The exception is to add a hook for end to end testing frameworks like Selenium.
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
 
-- [x] T-HTML-10) Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
+---
 
-  - **Explanation:** When you want to serve different images to users depending on their device display width.
-  - **Use:** Sending lower resolution to limit data waste and increase performance or sending larger images to a higher resolution display to enhance the UX.
-  - **Example:** `<img srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 2000w" src="..." alt="">`
-  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
+</details>
+<br/>
+
+5. > Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
+
+- **Explanation:**
+  - Semantics: Describe the content
+  - Connectivity: Communicate with the server
+  - Offline and storage: Store data client-side
+  - Multimedia: Make audio and video first-class citizens
+  - Graphics and effects: Diverse range of presentation options
+  - Performance and integration: Speed optimization
+  - Device access: Various input and output devices
+  - Styling: More sophisticated themes
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
+
+---
+
+</details>
+<br/>
+
+6. > Describe the difference between a cookie, sessionStorage and localStorage.
+
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
+
+- **Explanation:** Cookies can be initiated by the server, have a manually set expiration date are small file size and are sent to the server with HTTP request. Local and session are both initiated by the client, are a relatively large file and aren't sent to the server. The main difference between local and session is that local storage will persist forever until cleared manually.
+- **Use:** They are all used for client side storage of strings in key-value pairs.
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
+
+---
+
+</details>
+<br/>
+
+7. > Describe the difference between `<script>, <script async> and <script defer>`.
+
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
+
+- **Explanation:**
+  - `<script>` HTML parsing is blocked, script is fetched and executed immediately.
+  - `<script async>` script fetched in parallel to HTML parsing and executed as soon as it is available.
+  - `<script defer>` script fetched in parallel to HTML parsing and executed when the page has finished parsing.
+- **Use:**
+  - Use `async` when the script is independent of any other scripts on the page
+  - `defer` is useful when you need to make sure the HTML is fully parsed before executing.
+- **Example:**
+  - `async` could be used for analytics scripts.
+  - A deferred script must not contain `document.write`
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
+
+---
+
+</details>
+<br/>
+
+8. > Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
+
+- **Explanation:** Putting `<link>`s in the `<head>` allows for quick "first meaningful paint". When a page first loads, HTML and CSS are being parsed simultaneously. Conversely `<script>` tags block HTML parsing while they are being downloaded and executed which can slow down your page. Placing the scripts at the bottom will allow the HTML to be parsed and displayed to the user first.
+- **Exceptions:** When your script contains `document.write`, however it isn't consider good practice to use `document.write`. Also if you need scripts to run on page load it may be beneficial to split them out from your main script and place in the head.
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
+
+---
+
+</details>
+<br/>
+
+9. > hat is progressive rendering?
+
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
+
+- **Explanation:** Techniques used to improve the performance of a webpage to render content for display as quickly as possible.
+- **Use:** Improving perceived load time
+- **Example:** Lazy loading of images, Prioritizing visible content (or above-the-fold rendering) and Async HTML fragments
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
+
+---
+
+</details>
+<br/>
+
+10. > Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
+
+<details>
+<summary align="right"><b>Click to View Answer</b></summary>
+
+- **Explanation:** When you want to serve different images to users depending on their device display width.
+- **Use:** Sending lower resolution to limit data waste and increase performance or sending larger images to a higher resolution display to enhance the UX.
+- **Example:** `<img srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 2000w" src="..." alt="">`
+- **Source:** https://www.frontendinterviewhandbook.com/html-questions
 
 - [x] T-HTML-11) Have you used different HTML templating languages before?
   - I've used nunjucks, haml and markdown. They seem relatively similar and have helpful features.
   - **Source:** https://www.frontendinterviewhandbook.com/html-questions
 
-### CSS
+---
+
+</details>
+<br/><br/>
+
+> # `CSS`
 
 - [x] T-CSS-1) What is CSS selector specificity and how does it work?
 
